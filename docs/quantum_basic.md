@@ -44,19 +44,21 @@ here is a schema of how it behave:
 ```
 
 For the sanity of your brain, let's now switch to a different example:
-imagine a piano, and we want to detect, which combination of key forms a middle C, our Hadamard gate here being, us pressing the 88 key at the same time.
+imagine a piano, and we want to detect, which combination of key forms a middle C, our **Hadamard gate** here being, us pressing the 88 key at the same time.
 
 Now let's imagine we send that giant 88-key chord as a single sound-wave towards a wall, we just need to shape a hole in the wall at the exact shape of the middle C sound-wave to identify it right ? The entire wave at once will interact with the wall, but only that middle C through all this combination will actually end up passing through so in a single play of our giant 88-key chord we would be capable of identifying the middle C and the rest will just bounce off the wall.
 
-Well here our "magical wall that identify the middle C" is our Oracle, and we shape it using wires and gates, shaped the way we want it to be in order to detect our middle C. Once it detects it, the oracle only flags it as this one is the one, by flipping it off negatively, leaving all the other untouched. but how do we find the exact key combination that formed a middle C?
+Well here our "magical wall that identify the middle C" is our **oracle**, and we shape it using wires and gates, shaped the way we want it to be in order to detect our middle C. Once it detects it, the oracle only flags it as this one is the one, by flipping it off negatively, leaving all the other untouched. but how do we find the exact key combination that formed a middle C?
 
 ### The diffusion operator & Read()
 
 Well our wave is a series of qubits, as for our piano example, lets say each key is entitled with it's wave, because it's really the case, we know the wave that passes through, so we just need to observe each qubits of that wave, to identify its binary representation.
 
-To do it we firstly need the diffusion operator that will allow us to cancel out each key to silence, so the correct key becomes a skyscraper of probability, like turning up the volume for the exact key combination that gave us that middle C. and then we measure, stopping the spin to freeze the qubits at their exact binary sequence of the winning key!
+To do it we firstly need the **diffusion operator** that will allow us to cancel out each key to silence, so the correct key becomes a skyscraper of probability, like turning up the volume for the exact key combination that gave us that middle C. and then we measure, stopping the spin to freeze the qubits at their exact binary sequence of the winning key!
 
-And that is how in quantum computing, we would find which key opens a door out of a million key on our keychain, at once in a single try (This is technically false bc we need to repeat the oracle + diffusion operator steps about a 1,000 times to get the volume to 100%)!
+And that is how in quantum computing, we would find which key opens a door out of a million key on our keychain, at once in a single try (This is technically false bc we need to repeat the **oracle + diffusion operator** steps about a 1,000 times to get the volume to 100%)!
+
+To calculate the amount of time we need to repeat can be calculated with:
 
 ```
 +-------------------+----------------------------+------------------------------+----------------+
